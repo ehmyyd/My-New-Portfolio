@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Inter", sans-serif;
+  --font-display: "Instrument Serif", serif;
+
+  --color-bg: hsl(var(--bg));
+  --color-surface: hsl(var(--surface));
+  --color-text-primary: hsl(var(--text));
+  --color-muted: hsl(var(--muted));
+  --color-stroke: hsl(var(--stroke));
+  --color-accent: hsl(var(--accent-color));
+  
+  --animate-role-fade-in: role-fade-in 0.4s ease-out;
+  --animate-gradient-shift: gradient-shift 6s ease infinite;
+}
+
+:root {
+  /* Natural Tones Palette */
+  --bg: 36 24% 94%;        /* #F5F2ED */
+  --surface: 0 0% 100%;    /* #FFFFFF */
+  --text: 24 8% 16%;       /* #2D2926 */
+  --muted: 33 5% 54%;      /* #8E8A85 */
+  --stroke: 0 0% 0% / 0.05;
+  --accent-color: 60 17% 30%; /* #5A5A40 */
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-primary font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .accent-gradient {
+    background: linear-gradient(90deg, #5A5A40 0%, #8E8A85 100%);
+  }
+
+  .accent-gradient-border {
+    position: relative;
+    background: white;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
+
+  .accent-gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #5A5A40 0%, #8E8A85 100%);
+  }
+
+  .blur-in {
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  .name-reveal {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll-down {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(200%); opacity: 0; }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+@keyframes role-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
