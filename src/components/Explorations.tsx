@@ -9,10 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 const base = import.meta.env.BASE_URL;
 
 const explorations = [
-  `${base}projects/kitchen1.jpg`,
-  `${base}projects/apartment1.jpg`,
-  `${base}projects/lagoon1.jpg`,
-  `${base}projects/medieval1.jpg`,
+  `${base}projects/exploration1.jpg`,
+  `${base}projects/exploration2.jpg`,
+  `${base}projects/exploration3.jpg`,
+  `${base}projects/exploration4.jpg`,
 ];
 
 export function Explorations() {
@@ -59,7 +59,7 @@ export function Explorations() {
             Visual <span className="italic">playground</span>
           </h2>
           <p className="text-muted max-w-sm font-light mb-8 mx-auto md:mx-0 leading-relaxed">
-            Experimenting with abstract lighting, textures, and geometry inside Unreal Engine 5.
+            Experimenting with abstract lighting, textures, and geometry inside Unreal Engine 5 and Blender.
           </p>
           <a 
             href="https://www.instagram.com/co.archviz" 
