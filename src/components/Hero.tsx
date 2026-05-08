@@ -109,7 +109,7 @@ export default function Hero() {
 
           {/* Contact */}
           <a 
-            href="mailto:syedahmadali1610@gmail.com"
+            href="mailto:syedahmadali1610@gmail.com?subject=Portfolio Inquiry - 3D/UE5 Project"
             className="group relative text-[11px] sm:text-xs rounded-full px-4 py-1.5 text-bg overflow-hidden font-medium"
           >
             <div className="absolute inset-0 -z-10 bg-accent" />
