@@ -161,8 +161,8 @@ export default function Hero() {
           </button>
           
           <a 
-            href="https://www.linkedin.com/in/syed-ahmad-ali-615151337"
-            target="_blank"
+            href="/cv.pdf"
+            download
             className="group px-10 py-4 rounded-full text-sm font-medium border border-stroke bg-surface text-text-primary hover:bg-bg hover:scale-105 transition-all shadow-sm"
           >
             <span>Download CV ↗</span>
