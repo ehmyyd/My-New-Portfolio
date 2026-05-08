@@ -1,20 +1,32 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="Portfolio Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+# Syed Ahmad Ali Naqvi
+### Unreal Engine Developer | 3D Generalist | Real-Time Visualizer
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## ⚡ Overview
 
-View your app in AI Studio: https://ai.studio/apps/57fb3bd7-05d4-4000-b708-d53684ec82ca
+Welcome to my professional portfolio. This repository hosts a dynamic web experience built to showcase photorealistic environments, architectural visualizations, and gameplay mechanics developed in **Unreal Engine 5** and **Blender**.
 
-## Run Locally
+I currently serve as the **Gameplay Head of the Games Society at Air University**, focusing on bridging the gap between high-fidelity 3D art and interactive performance.
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+*   **Frontend:** React, Tailwind CSS, Framer Motion
+*   **3D/Engine:** Unreal Engine 5 (Lumen, Path Tracing), Blender, 3ds Max
+*   **Design/Drafting:** AutoCAD, Adobe Creative Suite
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## 🚀 Run Locally
+
+This project is built with **Vite** and **React**. To get the environment running on your local machine:
+
+**Prerequisites:** Node.js (v18 or higher recommended)
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/ehmyyd/My-New-Portfolio.git](https://github.com/ehmyyd/My-New-Portfolio.git)
