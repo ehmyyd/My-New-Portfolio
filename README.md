@@ -7,13 +7,13 @@
 
 ---
 
-## ⚡ Overview
+##  Overview
 
 Welcome to my professional portfolio. This repository hosts a dynamic web experience built to showcase photorealistic environments, architectural visualizations, and gameplay mechanics developed in **Unreal Engine 5** and **Blender**.
 
 I currently serve as the **Gameplay Head of the Games Society at Air University**, focusing on bridging the gap between high-fidelity 3D art and interactive performance.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 *   **Frontend:** React, Tailwind CSS, Framer Motion
 *   **3D/Engine:** Unreal Engine 5 (Lumen, Path Tracing), Blender, 3ds Max
@@ -21,7 +21,7 @@ I currently serve as the **Gameplay Head of the Games Society at Air University*
 
 ---
 
-## 🚀 Run Locally
+##  Run Locally
 
 This project is built with **Vite** and **React**. To get the environment running on your local machine:
 
