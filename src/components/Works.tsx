@@ -80,6 +80,7 @@ const projects: Project[] = [
     aspect: "aspect-[4/5]",
     icon: Layers,
     linkedin: "https://www.linkedin.com/posts/syed-ahmad-ali-615151337_unrealengine5-cinematicrendering-quixelbridge-activity-7368918151800979456-eLXE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSPmzEBw-EHkVN9fqNLKF9TfIYhNCb914k"
+    video: `${base}videos/lagoon.mp4`
   },
   {
     title: "Medieval Valley Shooting Game",
@@ -98,6 +99,7 @@ const projects: Project[] = [
     aspect: "aspect-video lg:aspect-auto",
     icon: Gamepad2,
     linkedin: "https://www.linkedin.com/posts/syed-ahmad-ali-615151337_unrealengine-gamedevelopment-gamingcommunity-activity-7367879171236126720-yNTb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSPmzEBw-EHkVN9fqNLKF9TfIYhNCb914k"
+    video: `${base}videos/medievalgame.mp4`
   }
 ];
 
