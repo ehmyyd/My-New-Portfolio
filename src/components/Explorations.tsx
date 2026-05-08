@@ -5,11 +5,14 @@ import { cn } from '../lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// FIX: Added the base URL variable to route images correctly on GitHub Pages
+const base = import.meta.env.BASE_URL;
+
 const explorations = [
-  "/projects/kitchen1.jpg",
-  "/projects/apartment1.jpg",
-  "/projects/lagoon1.jpg",
-  "/projects/medieval1.jpg",
+  `${base}projects/kitchen1.jpg`,
+  `${base}projects/apartment1.jpg`,
+  `${base}projects/lagoon1.jpg`,
+  `${base}projects/medieval1.jpg`,
 ];
 
 export function Explorations() {
@@ -61,6 +64,7 @@ export function Explorations() {
           <a 
             href="https://www.instagram.com/co.archviz" 
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-10 py-3.5 rounded-full border border-stroke text-xs uppercase tracking-[0.2em] font-medium hover:bg-text-primary hover:text-bg transition-all"
           >
             Instagram Archive
@@ -72,8 +76,8 @@ export function Explorations() {
           {/* Column 1 */}
           <div ref={leftColRef} className="flex flex-col gap-6 md:gap-12 mt-20">
             {explorations.slice(0, 2).map((src, i) => (
-              <div key={i} className="aspect-square rounded-2xl overflow-hidden grayscale-[0.3] hover:grayscale-0 transition-all duration-700 bg-surface shadow-md">
-                <img src={src} className="w-full h-full object-cover" alt="" />
+              <div key={`col1-${i}`} className="aspect-square rounded-2xl overflow-hidden grayscale-[0.3] hover:grayscale-0 transition-all duration-700 bg-surface shadow-md">
+                <img src={src} className="w-full h-full object-cover" alt="Exploration render" />
               </div>
             ))}
           </div>
@@ -81,8 +85,8 @@ export function Explorations() {
           {/* Column 2 */}
           <div ref={rightColRef} className="flex flex-col gap-6 md:gap-12">
             {explorations.slice(2, 4).map((src, i) => (
-              <div key={i} className="aspect-square rounded-2xl overflow-hidden grayscale-[0.3] hover:grayscale-0 transition-all duration-700 bg-surface shadow-md">
-                <img src={src} className="w-full h-full object-cover" alt="" />
+              <div key={`col2-${i}`} className="aspect-square rounded-2xl overflow-hidden grayscale-[0.3] hover:grayscale-0 transition-all duration-700 bg-surface shadow-md">
+                <img src={src} className="w-full h-full object-cover" alt="Exploration render" />
               </div>
             ))}
           </div>
