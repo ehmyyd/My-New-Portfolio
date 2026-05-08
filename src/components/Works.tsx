@@ -13,7 +13,8 @@ interface Project {
   gallery: string[];
   aspect: string;
   icon: any;
-  linkedin: string; // <-- FIX 1: Added this line!
+  linkedin: string;
+  video?: string; // <-- FIX 1: Added this line!
 }
 
 // FIX 2: Added import.meta.env.BASE_URL to all images so they don't break on GitHub Pages
@@ -253,12 +254,27 @@ export function Works() {
                 </div>
 
                 <div className="flex flex-col gap-4 p-8 lg:p-12 bg-surface/50">
-                  {selectedProject.gallery.map((img, i) => (
-                    <div key={i} className="rounded-xl overflow-hidden border border-stroke aspect-video relative group">
-                      <img src={img} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-700" alt="" />
-                    </div>
-                  ))}
-                </div>
+          {/* Video Player - Only shows if the project has a video file */}
+          {selectedProject.video && (
+            <div className="rounded-xl overflow-hidden border border-stroke aspect-video relative bg-black shadow-inner">
+              <video 
+                src={selectedProject.video} 
+                controls 
+                className="w-full h-full object-contain"
+                poster={selectedProject.imageActive}
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )}
+
+          {/* Gallery Images */}
+          {selectedProject.gallery.map((img, i) => (
+            <div key={i} className="rounded-xl overflow-hidden border border-stroke aspect-video relative group">
+              <img src={img} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-700" alt="" />
+            </div>
+          ))}
+        </div>
               </div>
             </motion.div>
           </motion.div>
