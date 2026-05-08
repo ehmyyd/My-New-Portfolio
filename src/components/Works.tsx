@@ -26,9 +26,9 @@ const projects: Project[] = [
       "Demonstrated broadcast-ready render quality with Lumen GI."
     ],
     span: "md:col-span-12 lg:col-span-7",
-    imageActive: "https://images.unsplash.com/photo-1556911220-e15224bbafb0?q=80&w=1000&auto=format&fit=crop",
+    imageActive: "/projects/kitchen1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1556911220-e15224bbafb0?q=80&w=1000&auto=format&fit=crop"
+      "/projects/kitchen1.jpg"
     ],
     aspect: "aspect-[16/9] lg:aspect-auto",
     icon: Palette,
@@ -44,9 +44,13 @@ const projects: Project[] = [
       "Sophisticated lighting setup combining static and dynamic sources for realism."
     ],
     span: "md:col-span-12 lg:col-span-5",
-    imageActive: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop",
+    imageActive: "/projects/apartment1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop"
+      "/projects/apartment1.jpg",
+      "/projects/apartment2.jpg",
+      "/projects/apartment3.jpg",
+      "/projects/apartment4.jpg",
+      "/projects/apartment5.jpg"
     ],
     aspect: "aspect-square",
     icon: Zap,
@@ -62,9 +66,11 @@ const projects: Project[] = [
       "Integrated realistic water shaders and depth-based atmospheric effects."
     ],
     span: "md:col-span-12 lg:col-span-5",
-    imageActive: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop",
+    imageActive: "/projects/lagoon1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"
+      "/projects/lagoon1.jpg",
+      "/projects/lagoon2.jpg",
+      "/projects/lagoon3.jpg"
     ],
     aspect: "aspect-[4/5]",
     icon: Layers,
@@ -80,9 +86,9 @@ const projects: Project[] = [
       "Hand-crafted medieval assets and optimized interaction logic."
     ],
     span: "md:col-span-12 lg:col-span-7",
-    imageActive: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+    imageActive: "/projects/medieval1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop"
+      "/projects/medieval1.jpg"
     ],
     aspect: "aspect-video lg:aspect-auto",
     icon: Gamepad2,
