@@ -120,7 +120,7 @@ export function Education() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
               <h3 className="text-2xl font-display italic text-text-primary">BS Computer Games Development</h3>
               <span className="text-[10px] px-4 py-1.5 rounded-full bg-accent/10 text-accent font-bold uppercase tracking-widest border border-accent/20">
-                2023 – Present
+                2024 – Present
               </span>
             </div>
             <div className="text-lg font-medium text-text-primary mb-2">Air University, Islamabad</div>
@@ -160,7 +160,7 @@ export function Education() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
               <h3 className="text-2xl font-display italic text-text-primary">Intermediate</h3>
               <span className="text-[10px] px-4 py-1.5 rounded-full bg-stroke/10 text-muted font-bold uppercase tracking-widest border border-stroke/20">
-                2021 – 2023
+                2022 – 2024
               </span>
             </div>
             <div className="text-lg font-medium text-text-primary">GCU Lahore</div>
