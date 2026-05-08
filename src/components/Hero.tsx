@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Hls from 'hls.js';
+// Removed unused Hls import
 import { motion, AnimatePresence } from 'motion/react';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -9,11 +9,12 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const roles = ["Unreal Engine Developer", "3D Generalist", "Real-Time Visualizer"];
 
+// FIX: Define base for GitHub Pages compatibility
+const base = import.meta.env.BASE_URL;
+
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
   const nameRef = useRef<HTMLHeadingElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -56,7 +57,7 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-bg">
-      {/* Background Pattern instead of dark video */}
+      {/* Background Pattern */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/0 via-bg/20 to-bg" />
@@ -106,7 +107,7 @@ export default function Hero() {
 
           <div className="w-px h-5 bg-stroke/10 mx-2" />
 
-          {/* Call to action */}
+          {/* Contact */}
           <a 
             href="mailto:syedahmadali1610@gmail.com"
             className="group relative text-[11px] sm:text-xs rounded-full px-4 py-1.5 text-bg overflow-hidden font-medium"
@@ -160,8 +161,9 @@ export default function Hero() {
             <span>Project Gallery</span>
           </button>
           
+          {/* FIX: Corrected path for GitHub Pages using ${base} */}
           <a 
-            href="/cv.pdf"
+            href={`${base}cv.pdf`}
             download
             className="group px-10 py-4 rounded-full text-sm font-medium border border-stroke bg-surface text-text-primary hover:bg-bg hover:scale-105 transition-all shadow-sm"
           >
