@@ -6,10 +6,10 @@ import { cn } from '../lib/utils';
 gsap.registerPlugin(ScrollTrigger);
 
 const explorations = [
-  "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=400&fit=crop",
-  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&fit=crop",
-  "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=400&fit=crop",
-  "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=400&fit=crop",
+  "/projects/kitchen1.jpg",
+  "/projects/apartment1.jpg",
+  "/projects/lagoon1.jpg",
+  "/projects/medieval1.jpg",
 ];
 
 export function Explorations() {
