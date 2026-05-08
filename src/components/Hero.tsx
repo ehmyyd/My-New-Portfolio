@@ -132,21 +132,21 @@ export default function Hero() {
         </h1>
 
         <div className="blur-in text-lg md:text-2xl font-light text-text-primary/90 mb-6 h-8 flex items-center justify-center gap-2">
-          A 
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={roles[roleIndex]}
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="font-display italic text-accent"
-            >
-              {roles[roleIndex]}
-            </motion.span>
-          </AnimatePresence>
-          lives in Islamabad.
-        </div>
+  <AnimatePresence mode="wait">
+    <motion.span
+      key={roles[roleIndex]}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="font-display italic text-accent"
+    >
+      {roles[roleIndex]}
+    </motion.span>
+  </AnimatePresence>
+  <span className="opacity-40 mx-2">•</span> 
+  Islamabad
+</div>
 
         <p className="blur-in text-sm md:text-base text-muted max-w-lg mx-auto mb-10 leading-relaxed font-light">
           UE5 Developer and 3D Generalist producing photorealistic real-time environments. 
