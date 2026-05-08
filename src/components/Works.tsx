@@ -168,10 +168,10 @@ export function Works() {
               <img 
                 src={project.imageActive} 
                 alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover grayscale-[0.5] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+                className="absolute inset-0 w-full h-full object-cover  group-hover:scale-105 transition-all duration-1000"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-bg/40 to-transparent pointer-events-none" />
+             
 
               <div className="absolute inset-0 bg-surface/95 opacity-0 group-hover:opacity-100 backdrop-blur-md transition-all duration-500 flex flex-col items-center justify-center p-8">
                 <div className="text-center">
