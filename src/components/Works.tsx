@@ -13,7 +13,11 @@ interface Project {
   gallery: string[];
   aspect: string;
   icon: any;
+  linkedin: string; // <-- FIX 1: Added this line!
 }
+
+// FIX 2: Added import.meta.env.BASE_URL to all images so they don't break on GitHub Pages
+const base = import.meta.env.BASE_URL;
 
 const projects: Project[] = [
   {
@@ -26,9 +30,9 @@ const projects: Project[] = [
       "Demonstrated broadcast-ready render quality with Lumen GI."
     ],
     span: "md:col-span-12 lg:col-span-7",
-    imageActive: "/projects/kitchen1.jpg",
+    imageActive: `${base}projects/kitchen1.jpg`,
     gallery: [
-      "/projects/kitchen1.jpg"
+      `${base}projects/kitchen1.jpg`
     ],
     aspect: "aspect-[16/9] lg:aspect-auto",
     icon: Palette,
@@ -44,13 +48,13 @@ const projects: Project[] = [
       "Sophisticated lighting setup combining static and dynamic sources for realism."
     ],
     span: "md:col-span-12 lg:col-span-5",
-    imageActive: "/projects/apartment1.jpg",
+    imageActive: `${base}projects/apartment1.jpg`,
     gallery: [
-      "/projects/apartment1.jpg",
-      "/projects/apartment2.jpg",
-      "/projects/apartment3.jpg",
-      "/projects/apartment4.jpg",
-      "/projects/apartment5.jpg"
+      `${base}projects/apartment1.jpg`,
+      `${base}projects/apartment2.jpg`,
+      `${base}projects/apartment3.jpg`,
+      `${base}projects/apartment4.jpg`,
+      `${base}projects/apartment5.jpg`
     ],
     aspect: "aspect-square",
     icon: Zap,
@@ -66,11 +70,11 @@ const projects: Project[] = [
       "Integrated realistic water shaders and depth-based atmospheric effects."
     ],
     span: "md:col-span-12 lg:col-span-5",
-    imageActive: "/projects/lagoon1.jpg",
+    imageActive: `${base}projects/lagoon1.jpg`,
     gallery: [
-      "/projects/lagoon1.jpg",
-      "/projects/lagoon2.jpg",
-      "/projects/lagoon3.jpg"
+      `${base}projects/lagoon1.jpg`,
+      `${base}projects/lagoon2.jpg`,
+      `${base}projects/lagoon3.jpg`
     ],
     aspect: "aspect-[4/5]",
     icon: Layers,
@@ -86,9 +90,9 @@ const projects: Project[] = [
       "Hand-crafted medieval assets and optimized interaction logic."
     ],
     span: "md:col-span-12 lg:col-span-7",
-    imageActive: "/projects/medieval1.jpg",
+    imageActive: `${base}projects/medieval1.jpg`,
     gallery: [
-      "/projects/medieval1.jpg"
+      `${base}projects/medieval1.jpg`
     ],
     aspect: "aspect-video lg:aspect-auto",
     icon: Gamepad2,
@@ -238,8 +242,9 @@ export function Works() {
 
                   <div className="mt-12 flex flex-wrap gap-4">
                     <a 
-                      href={selectedProject.linkedin || "https://www.linkedin.com/in/syed-ahmad-ali-615151337"} 
+                      href={selectedProject.linkedin} 
                       target="_blank" 
+                      rel="noopener noreferrer"
                       className="px-8 py-3 rounded-full bg-accent text-bg text-sm font-medium hover:scale-105 transition-transform"
                     >
                       View on LinkedIn ↗
