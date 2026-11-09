@@ -22,6 +22,25 @@ const base = import.meta.env.BASE_URL;
 
 const projects: Project[] = [
   {
+    title: "ICBM Animation",
+    category: "Unity • Blender",
+    description: "Cinematic sequence following an ICBM from launch to target, built end to end in Unity.",
+    details: [
+      "Modelled the rocket in Blender and used environment assets from the Unity Asset Store.",
+      "Did all camera work, cuts, lighting, animation blending and layers, and audio sync myself.",
+      "Single-person production, from asset setup to the final sequence."
+    ],
+    span: "md:col-span-12 lg:col-span-5",
+    imageActive: `${base}projects/icbm1.jpg`,
+    gallery: [
+      `${base}projects/icbm1.jpg`
+    ],
+    aspect: "aspect-[4/5]",
+    icon: Layers,
+    linkedin: "https://lnkd.in/p/dt_5Wc6n",
+    video: `${base}videos/icbm.mp4`
+  },
+  {
     title: "Modern Kitchen Interior",
     category: "UE5 • Archviz",
     description: "Photorealistic kitchen environment leveraging UE5's Lumen global illumination system for fully dynamic, bounce-lit interior light.",
@@ -118,7 +137,7 @@ export function Works() {
     <section id="work" className="bg-bg py-24 md:py-32 px-6">
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -137,10 +156,10 @@ export function Works() {
               Demonstrating expertise in photorealistic real-time environments and gameplay systems within Unreal Engine 5.
             </p>
           </div>
-          
-          <a 
-            href="https://www.linkedin.com/in/syed-ahmad-ali-615151337" 
-            target="_blank" 
+
+          <a
+            href="https://www.linkedin.com/in/syed-ahmad-ali-615151337"
+            target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-3 group"
           >
@@ -168,13 +187,13 @@ export function Works() {
                 project.aspect
               )}
             >
-              <img 
-                src={project.imageActive} 
+              <img
+                src={project.imageActive}
                 alt={project.title}
                 className="absolute inset-0 w-full h-full object-cover  group-hover:scale-105 transition-all duration-1000"
               />
-              
-             
+
+
 
               <div className="absolute inset-0 bg-surface/95 opacity-0 group-hover:opacity-100 backdrop-blur-md transition-all duration-500 flex flex-col items-center justify-center p-8">
                 <div className="text-center">
@@ -215,7 +234,7 @@ export function Works() {
               className="relative w-full max-w-5xl max-h-[90vh] bg-bg overflow-y-auto rounded-[2rem] shadow-2xl border border-stroke"
               onClick={(e) => e.stopPropagation()}
             >
-              <button 
+              <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-6 right-6 z-10 w-12 h-12 rounded-full bg-surface border border-stroke flex items-center justify-center hover:bg-accent hover:text-bg transition-colors"
               >
@@ -226,7 +245,7 @@ export function Works() {
                 <div className="p-8 md:p-12">
                   <div className="text-xs text-accent uppercase tracking-[0.3em] font-bold mb-4">{selectedProject.category}</div>
                   <h2 className="text-4xl md:text-5xl font-display italic text-text-primary mb-6">{selectedProject.title}</h2>
-                  
+
                   <p className="text-muted leading-relaxed mb-8">
                     {selectedProject.description}
                   </p>
@@ -244,9 +263,9 @@ export function Works() {
                   </div>
 
                   <div className="mt-12 flex flex-wrap gap-4">
-                    <a 
-                      href={selectedProject.linkedin} 
-                      target="_blank" 
+                    <a
+                      href={selectedProject.linkedin}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="px-8 py-3 rounded-full bg-accent text-bg text-sm font-medium hover:scale-105 transition-transform"
                     >
@@ -256,27 +275,27 @@ export function Works() {
                 </div>
 
                 <div className="flex flex-col gap-4 p-8 lg:p-12 bg-surface/50">
-          {/* Video Player - Only shows if the project has a video file */}
-          {selectedProject.video && (
-            <div className="rounded-xl overflow-hidden border border-stroke aspect-video relative bg-black shadow-inner">
-              <video 
-                src={selectedProject.video} 
-                controls 
-                className="w-full h-full object-contain"
-                poster={selectedProject.imageActive}
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          )}
+                  {/* Video Player - Only shows if the project has a video file */}
+                  {selectedProject.video && (
+                    <div className="rounded-xl overflow-hidden border border-stroke aspect-video relative bg-black shadow-inner">
+                      <video
+                        src={selectedProject.video}
+                        controls
+                        className="w-full h-full object-contain"
+                        poster={selectedProject.imageActive}
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  )}
 
-          {/* Gallery Images */}
-          {selectedProject.gallery.map((img, i) => (
-            <div key={i} className="rounded-xl overflow-hidden border border-stroke aspect-video relative group">
-              <img src={img} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-700" alt="" />
-            </div>
-          ))}
-        </div>
+                  {/* Gallery Images */}
+                  {selectedProject.gallery.map((img, i) => (
+                    <div key={i} className="rounded-xl overflow-hidden border border-stroke aspect-video relative group">
+                      <img src={img} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-700" alt="" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </motion.div>
