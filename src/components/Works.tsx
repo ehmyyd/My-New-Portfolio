@@ -166,9 +166,9 @@ const projects: Project[] = [
       "Lit the wood plank wall with a single spotlight."
     ],
     span: "md:col-span-12 lg:col-span-5",
-    imageActive: `${base}projects/Bathroom.jpg`,
+    imageActive: `${base}projects/Bathroom.jpeg`,
     gallery: [
-      `${base}projects/Bathroom.jpg`
+      `${base}projects/Bathroom.jpeg`
     ],
     aspect: "aspect-video lg:aspect-auto",
     icon: Palette,
@@ -184,9 +184,9 @@ const projects: Project[] = [
       "Let direct sunlight fall across the marble floor."
     ],
     span: "md:col-span-12 lg:col-span-7",
-    imageActive: `${base}projects/LivingRoom.jpg`,
+    imageActive: `${base}projects/LivingRoom.jpeg`,
     gallery: [
-      `${base}projects/LivingRoom.jpg`
+      `${base}projects/LivingRoom.jpeg`
     ],
     aspect: "aspect-video",
     icon: Palette,
