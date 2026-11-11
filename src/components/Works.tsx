@@ -119,6 +119,79 @@ const projects: Project[] = [
     icon: Gamepad2,
     linkedin: "https://www.linkedin.com/posts/syed-ahmad-ali-615151337_unrealengine-gamedevelopment-gamingcommunity-activity-7367879171236126720-yNTb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSPmzEBw-EHkVN9fqNLKF9TfIYhNCb914k",
     video: `${base}videos/medievalgame.mp4`
+  },
+  {
+    title: "House Exterior",
+    category: "UE5 • Archviz",
+    description: "Outside view of a single-storey house with a flat white roof, seen through trees across a lawn.",
+    details: [
+      "Set the house in a grass lawn with trees around it.",
+      "Added a white fence along the edge of the plot.",
+      "Used a high camera angle to show the whole house."
+    ],
+    span: "md:col-span-12 lg:col-span-5",
+    imageActive: `${base}projects/HighAngle_House_Exterior.jpeg`,
+    gallery: [
+      `${base}projects/HighAngle_House_Exterior.jpeg`
+    ],
+    aspect: "aspect-[4/3]",
+    icon: Palette,
+    linkedin: "https://lnkd.in/p/d_j-xf2S"
+  },
+  {
+    title: "Bedroom",
+    category: "UE5 • Archviz",
+    description: "Two views of the bedroom. One from outside through the glass wall, one from inside.",
+    details: [
+      "Set up a bedroom with a full glass wall and a bed.",
+      "Added sheer curtains along the glass wall in the inside view.",
+      "Used a wood floor in the outside view and a dark tile floor in the inside view."
+    ],
+    span: "md:col-span-12 lg:col-span-7",
+    imageActive: `${base}projects/BedroomExterior.jpeg`,
+    gallery: [
+      `${base}projects/BedroomExterior.jpeg`,
+      `${base}projects/BedroomInterior.jpeg`
+    ],
+    aspect: "aspect-video",
+    icon: Palette,
+    linkedin: "https://lnkd.in/p/dh-UBuFN"
+  },
+  {
+    title: "Bathroom",
+    category: "UE5 • Archviz",
+    description: "Bathroom with a dark marble vanity, a round tub behind glass panels and a wood plank wall.",
+    details: [
+      "Furnished the room with a floating marble vanity, an oval mirror and a round tub.",
+      "Used glass panels to separate the tub and shower from the rest of the room.",
+      "Lit the wood plank wall with a single spotlight."
+    ],
+    span: "md:col-span-12 lg:col-span-5",
+    imageActive: `${base}projects/Bathroom.jpeg`,
+    gallery: [
+      `${base}projects/Bathroom.jpeg`
+    ],
+    aspect: "aspect-video lg:aspect-auto",
+    icon: Palette,
+    linkedin: "https://lnkd.in/p/dUuZAV4y"
+  },
+  {
+    title: "Living Room",
+    category: "UE5 • Archviz",
+    description: "Living room with a blue sofa and a glass coffee table with a chess set.",
+    details: [
+      "Placed a blue sofa and a glass coffee table next to a large window.",
+      "Added a chess set on the table.",
+      "Let direct sunlight fall across the marble floor."
+    ],
+    span: "md:col-span-12 lg:col-span-7",
+    imageActive: `${base}projects/LivingRoom.jpeg`,
+    gallery: [
+      `${base}projects/LivingRoom.jpeg`
+    ],
+    aspect: "aspect-video",
+    icon: Palette,
+    linkedin: "https://lnkd.in/p/d_M-na29"
   }
 ];
 
@@ -171,7 +244,7 @@ export function Works() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:h-[900px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
@@ -250,17 +323,19 @@ export function Works() {
                     {selectedProject.description}
                   </p>
 
-                  <div className="space-y-6">
-                    <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-text-primary">Core Contributions</h4>
-                    <ul className="space-y-4">
-                      {selectedProject.details.map((detail, i) => (
-                        <li key={i} className="flex gap-4 text-sm text-muted">
-                          <span className="text-accent">•</span>
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {selectedProject.details.length > 0 && (
+                    <div className="space-y-6">
+                      <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-text-primary">Core Contributions</h4>
+                      <ul className="space-y-4">
+                        {selectedProject.details.map((detail, i) => (
+                          <li key={i} className="flex gap-4 text-sm text-muted">
+                            <span className="text-accent">•</span>
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   <div className="mt-12 flex flex-wrap gap-4">
                     <a

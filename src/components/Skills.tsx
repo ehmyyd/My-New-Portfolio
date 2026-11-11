@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Box, Code2, Cpu, Globe, Layers, LucideIcon, Palette, Zap } from 'lucide-react';
+import { Box, Code2, Cpu, Gamepad2, Globe, Layers, LucideIcon, Palette, Users, Zap } from 'lucide-react';
 
 interface SkillCategory {
   title: string;
@@ -11,7 +11,17 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Real-Time Engine",
     icon: Zap,
-    skills: ["Unreal Engine 5", "Lumen & Nanite", "Blueprints", "Sequencer"]
+    skills: ["Unreal Engine 5", "Lumen & Nanite", "Blueprints", "Sequencer", "Niagara VFX"]
+  },
+  {
+    title: "Unity & Simulation",
+    icon: Gamepad2,
+    skills: ["Unity", "C#", "Simulation", "Serious Games"]
+  },
+  {
+    title: "Machine Learning",
+    icon: Cpu,
+    skills: ["ML-Agents", "Python", "AI for Games", "Reinforcement Learning"]
   },
   {
     title: "Rendering",
@@ -35,7 +45,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     title: "Soft Skills",
-    icon: Globe,
+    icon: Users,
     skills: ["Creative Direction", "Visual Storytelling", "Team Leadership"]
   },
   {
@@ -77,7 +87,7 @@ export function Skills() {
               <h3 className="text-xl font-display italic text-text-primary mb-4">{cat.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill, j) => (
-                  <span 
+                  <span
                     key={j}
                     className="text-[10px] px-3 py-1 rounded-full bg-bg border border-stroke text-muted uppercase tracking-wider"
                   >
@@ -96,7 +106,7 @@ export function Skills() {
 export function Education() {
   return (
     <section id="education" className="bg-bg py-24 px-6 border-t border-stroke/50">
-       <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -110,7 +120,7 @@ export function Education() {
         </div>
 
         <div className="space-y-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -124,17 +134,17 @@ export function Education() {
               </span>
             </div>
             <div className="text-lg font-medium text-text-primary mb-2">Air University, Islamabad</div>
-            <div className="text-xs text-muted font-bold uppercase tracking-widest mb-6">Currently in 4th Semester</div>
-            
+            <div className="text-xs text-muted font-bold uppercase tracking-widest mb-6">Currently in 5th Semester</div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
               <div>
                 <h4 className="text-[10px] text-accent uppercase tracking-[0.2em] font-bold mb-4">Core Coursework</h4>
-                <ul className="grid grid-cols-1 gap-2 text-sm text-muted">
-                  <li>• Real-Time Rendering</li>
-                  <li>• 3D Modelling & Animation</li>
+                <ul className="grid grid-cols-1 gap-3 text-sm text-muted">
                   <li>• Game Engine Architecture</li>
+                  <li>• Real-Time Rendering</li>
                   <li>• AI for Games</li>
-                  <li>• Data Structures</li>
+                  <li>• Operating Systems</li>
+                  <li>• Storyboarding & Narrative Development</li>
                 </ul>
               </div>
               <div>
@@ -149,7 +159,7 @@ export function Education() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -158,7 +168,7 @@ export function Education() {
           >
             <div className="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-stroke border-4 border-bg" />
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-              <h3 className="text-2xl font-display italic text-text-primary">Intermediate</h3>
+              <h3 className="text-2xl font-display italic text-text-primary">Intermediate (Pre-Medical)</h3>
               <span className="text-[10px] px-4 py-1.5 rounded-full bg-stroke/10 text-muted font-bold uppercase tracking-widest border border-stroke/20">
                 2022 – 2024
               </span>

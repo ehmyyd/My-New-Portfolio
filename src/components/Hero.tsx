@@ -7,7 +7,21 @@ import { cn } from '../lib/utils';
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const roles = ["Unreal Engine Developer", "3D Generalist", "Real-Time Visualizer"];
+const roles = [
+  "Unreal Engine Developer",
+  "3D Generalist",
+  "Real-Time Visualizer",
+  "Simulation & Serious Games Developer"
+];
+
+const focusAreas = [
+  "Unreal Engine",
+  "Unity",
+  "Blender",
+  "Machine Learning",
+  "Serious Games",
+  "Simulation"
+];
 
 // FIX: Define base for GitHub Pages compatibility
 const base = import.meta.env.BASE_URL;
@@ -37,13 +51,13 @@ export default function Hero() {
       duration: 1.2,
       delay: 0.5
     })
-    .to(".blur-in", {
-      opacity: 1,
-      filter: "blur(0px)",
-      y: 0,
-      duration: 1,
-      stagger: 0.1
-    }, "-=0.8");
+      .to(".blur-in", {
+        opacity: 1,
+        filter: "blur(0px)",
+        y: 0,
+        duration: 1,
+        stagger: 0.1
+      }, "-=0.8");
 
     return () => {
       clearInterval(interval);
@@ -73,7 +87,7 @@ export default function Hero() {
           scrolled && "shadow-lg shadow-black/5 bg-surface/95"
         )}>
           {/* Logo */}
-          <button 
+          <button
             onClick={() => scrollToSection("#home")}
             className="group relative w-9 h-9 rounded-full flex items-center justify-center overflow-hidden transition-transform hover:scale-110"
           >
@@ -108,7 +122,7 @@ export default function Hero() {
           <div className="w-px h-5 bg-stroke/10 mx-2" />
 
           {/* Contact */}
-          <a 
+          <a
             href="mailto:syedahmadali1610@gmail.com?subject=Portfolio Inquiry - 3D/UE5 Project"
             className="group relative text-[11px] sm:text-xs rounded-full px-4 py-1.5 text-bg overflow-hidden font-medium"
           >
@@ -125,44 +139,57 @@ export default function Hero() {
         <div className="blur-in text-[10px] md:text-xs text-accent uppercase tracking-[0.3em] mb-6 font-bold">
           BS COMPUTER GAMES DEVELOPMENT
         </div>
-        
+
         <h1 ref={nameRef} className="name-reveal text-6xl md:text-8xl lg:text-9xl font-display italic leading-[0.9] tracking-tight text-text-primary mb-8 select-none">
           Syed Ahmad <br />
           <span className="opacity-80">Ali Naqvi</span>
         </h1>
 
         <div className="blur-in text-lg md:text-2xl font-light text-text-primary/90 mb-6 h-8 flex items-center justify-center gap-2">
-  <AnimatePresence mode="wait">
-    <motion.span
-      key={roles[roleIndex]}
-      initial={{ y: 10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -10, opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="font-display italic text-accent"
-    >
-      {roles[roleIndex]}
-    </motion.span>
-  </AnimatePresence>
-  <span className="opacity-40 mx-2">•</span> 
-  Islamabad
-</div>
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={roles[roleIndex]}
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="font-display italic text-accent"
+            >
+              {roles[roleIndex]}
+            </motion.span>
+          </AnimatePresence>
+          <span className="opacity-40 mx-2">•</span>
+          Islamabad
+        </div>
 
-        <p className="blur-in text-sm md:text-base text-muted max-w-lg mx-auto mb-10 leading-relaxed font-light">
-          UE5 Developer and 3D Generalist producing photorealistic real-time environments. 
+        <p className="blur-in text-sm md:text-base text-muted max-w-lg mx-auto mb-6 leading-relaxed font-light">
+          UE5 Developer and 3D Generalist producing photorealistic real-time environments.
           Gameplay Head at Air University Games Society. Specialized in Lumen/Nanite and cinematic lighting.
+          Also building simulations and serious games in Unity and Unreal Engine, with machine learning for games and simulation.
         </p>
 
+        {/* Focus areas */}
+        <div className="blur-in flex flex-wrap items-center justify-center gap-2 max-w-xl mx-auto mb-10">
+          {focusAreas.map((area) => (
+            <span
+              key={area}
+              className="text-[10px] md:text-xs uppercase tracking-[0.15em] font-medium text-muted border border-stroke/30 bg-surface/60 rounded-full px-3 py-1"
+            >
+              {area}
+            </span>
+          ))}
+        </div>
+
         <div className="blur-in flex flex-wrap items-center justify-center gap-4">
-          <button 
+          <button
             onClick={() => scrollToSection("#work")}
             className="group relative px-10 py-4 rounded-full text-sm font-medium bg-text-primary text-bg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-black/5"
           >
             <span>Project Gallery</span>
           </button>
-          
+
           {/* FIX: Corrected path for GitHub Pages using ${base} */}
-          <a 
+          <a
             href={`${base}cv.pdf`}
             download
             className="group px-10 py-4 rounded-full text-sm font-medium border border-stroke bg-surface text-text-primary hover:bg-bg hover:scale-105 transition-all shadow-sm"
