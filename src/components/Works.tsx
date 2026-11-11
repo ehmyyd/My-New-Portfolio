@@ -14,10 +14,9 @@ interface Project {
   aspect: string;
   icon: any;
   linkedin: string;
-  video?: string; // <-- FIX 1: Added this line!
+  video?: string;
 }
 
-// FIX 2: Added import.meta.env.BASE_URL to all images so they don't break on GitHub Pages
 const base = import.meta.env.BASE_URL;
 
 const projects: Project[] = [
@@ -130,9 +129,9 @@ const projects: Project[] = [
       "Used a high camera angle to show the whole house."
     ],
     span: "md:col-span-12 lg:col-span-5",
-    imageActive: `${base}projects/HighAngle_House_Exterior.jpeg`,
+    imageActive: `${base}projects/HighAngle_House_Exterior.jpg`,
     gallery: [
-      `${base}projects/HighAngle_House_Exterior.jpeg`
+      `${base}projects/HighAngle_House_Exterior.jpg`
     ],
     aspect: "aspect-[4/3]",
     icon: Palette,
@@ -148,10 +147,10 @@ const projects: Project[] = [
       "Used a wood floor in the outside view and a dark tile floor in the inside view."
     ],
     span: "md:col-span-12 lg:col-span-7",
-    imageActive: `${base}projects/BedroomExterior.jpeg`,
+    imageActive: `${base}projects/BedroomExterior.jpg`,
     gallery: [
-      `${base}projects/BedroomExterior.jpeg`,
-      `${base}projects/BedroomInterior.jpeg`
+      `${base}projects/BedroomExterior.jpg`,
+      `${base}projects/BedroomInterior.jpg`
     ],
     aspect: "aspect-video",
     icon: Palette,
@@ -167,9 +166,9 @@ const projects: Project[] = [
       "Lit the wood plank wall with a single spotlight."
     ],
     span: "md:col-span-12 lg:col-span-5",
-    imageActive: `${base}projects/Bathroom.jpeg`,
+    imageActive: `${base}projects/Bathroom.jpg`,
     gallery: [
-      `${base}projects/Bathroom.jpeg`
+      `${base}projects/Bathroom.jpg`
     ],
     aspect: "aspect-video lg:aspect-auto",
     icon: Palette,
@@ -185,9 +184,9 @@ const projects: Project[] = [
       "Let direct sunlight fall across the marble floor."
     ],
     span: "md:col-span-12 lg:col-span-7",
-    imageActive: `${base}projects/LivingRoom.jpeg`,
+    imageActive: `${base}projects/LivingRoom.jpg`,
     gallery: [
-      `${base}projects/LivingRoom.jpeg`
+      `${base}projects/LivingRoom.jpg`
     ],
     aspect: "aspect-video",
     icon: Palette,
@@ -265,8 +264,6 @@ export function Works() {
                 alt={project.title}
                 className="absolute inset-0 w-full h-full object-cover  group-hover:scale-105 transition-all duration-1000"
               />
-
-
 
               <div className="absolute inset-0 bg-surface/95 opacity-0 group-hover:opacity-100 backdrop-blur-md transition-all duration-500 flex flex-col items-center justify-center p-8">
                 <div className="text-center">
@@ -350,7 +347,7 @@ export function Works() {
                 </div>
 
                 <div className="flex flex-col gap-4 p-8 lg:p-12 bg-surface/50">
-                  {/* Video Player - Only shows if the project has a video file */}
+                  {/* Video Player */}
                   {selectedProject.video && (
                     <div className="rounded-xl overflow-hidden border border-stroke aspect-video relative bg-black shadow-inner">
                       <video

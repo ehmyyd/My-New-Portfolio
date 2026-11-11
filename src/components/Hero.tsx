@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-// Removed unused Hls import
 import { motion, AnimatePresence } from 'motion/react';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -23,7 +22,6 @@ const focusAreas = [
   "Simulation"
 ];
 
-// FIX: Define base for GitHub Pages compatibility
 const base = import.meta.env.BASE_URL;
 
 export default function Hero() {
@@ -70,7 +68,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-bg">
+    <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center text-center px-6 pb-24 bg-bg">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
@@ -188,7 +186,6 @@ export default function Hero() {
             <span>Project Gallery</span>
           </button>
 
-          {/* FIX: Corrected path for GitHub Pages using ${base} */}
           <a
             href={`${base}cv.pdf`}
             download
